@@ -1,38 +1,9 @@
-import EventHub from '../src/index';
+import EventHub from '../src/main';
 console.log(EventHub);
 
 const eventHub = new EventHub();
 
 type TestCase = (msg: string) => void;
-
-/*
-//console.assert(true === (eventHub instanceof Object),"eventHub是个对象");
-
-// on emit
-let called = false;
-eventHub.on('xxx',(y)=>{
-  called = true;
-  console.log(y === '今天林志琳结婚啦');
-});
-
-eventHub.emit('xxx','今天林志琳结婚啦');
-
-const eventHub2 = new EventHub();
-
-
-
-// on emit
-let called2 = false;
-const fn1 = ()=>{
-  called2 = true;
-}
-eventHub2.on('yyy',fn1);
-eventHub2.off('yyy',fn1);
-eventHub2.emit('yyy');
-setTimeout(()=>{
-  console.log(called2);
-},1000)
-*/
 
 const test1: TestCase = (msg:string)=>{
   console.assert(true === (eventHub instanceof Object),"eventHub是个对象");
